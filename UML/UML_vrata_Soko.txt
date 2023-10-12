@@ -1,0 +1,24 @@
+@startuml
+
+actor "Zunanji" as zunanji
+actor "Domači" as domaci
+
+
+
+package "Kontrola vrat"{
+left to right direction
+usecase "Povezovanje z napravo" as povezovanje
+usecase "Preverjanje identitete" as avtorizacija
+usecase "Odklepanje/Zaklepanje vrat" as odklepanje
+}
+
+
+
+
+
+domaci -> povezovanje
+zunanji -> povezovanje
+povezovanje -> avtorizacija 
+avtorizacija -> odklepanje : Domaci
+
+@enduml
