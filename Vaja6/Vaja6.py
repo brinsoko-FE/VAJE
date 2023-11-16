@@ -59,7 +59,7 @@ def prestejTranzakcije(blockNum = "latest"):
         counter += 1
 
     # Izpišemo/sprintamo counter (število transakcij)
-    print(counter)
+    return counter
 
 
 
@@ -76,7 +76,12 @@ def izlusciNaslove(blockNum = "latest"):
         podatki["od"].append(transaction.get("from"))
         podatki["to"].append(transaction.get("to"))
 
-    # sprintamo dictionary
-    print(podatki)
+    return podatki
 
-izlusciNaslove()
+def main():
+    print(f"Zadnji block: {getBlock()}")
+    print(f"Število transakcij v zadnjem blocku: {prestejTranzakcije()}")
+    print("\n\n\n\n")
+    #print(f"Naslovi v zadnjem blocku: {izlusciNaslove()}")
+
+main()
