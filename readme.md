@@ -1,1 +1,1 @@
-Test  
+Repozitorij za predmet telekomunikacijski protokoli.
